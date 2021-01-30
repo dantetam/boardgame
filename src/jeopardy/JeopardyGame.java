@@ -17,7 +17,7 @@ public class JeopardyGame extends PApplet {
 	public Clue currentClue = null;
 	
 	public static void main(String args[]) {
-		PApplet.main(new String[] { "--present", JeopardyGame.class.getName() });
+		PApplet.main(new String[] { JeopardyGame.class.getName() });
 	} 
 	
 	public void settings() {
@@ -45,6 +45,7 @@ public class JeopardyGame extends PApplet {
 						String category = line.split(":")[1].trim();
 						categories.add(category);
 						allClues.add(new ArrayList<>());
+						allClues.get(allClues.size() - 1).add(new Category(category));
 					}
 					else if (line.contains("ANSWER:")) {
 						String answer = line.split(":")[1].trim();
@@ -92,19 +93,21 @@ public class JeopardyGame extends PApplet {
 			for (int r = 0; r < allClues.get(0).size(); r++) {
 				textSize(120);
 				Clue clue = allClues.get(c).get(r);
-				if (clue.active) {
-					fill(0,120,255);
-					rect(c*clueWidth, r*clueHeight, clueWidth, clueHeight);
+				fill(0,120,255);
+				rect(c*clueWidth, r*clueHeight, clueWidth, clueHeight);
+				if (clue.active && !(clue instanceof Category)) {
 					fill(255);
 					if (mode == GameMode.BOARD_REVEALED_DAILY_DOUBLE && clue.equals(currentClue)) {
 						textSize(80);
 						text("DAILY\nDOUBLE", (c+0.1f)*clueWidth, (r+0.3f)*clueHeight);
 					}
 					else
-						text(clue.value, (c+0.25f)*clueWidth, (r+0.5f)*clueHeight);
+						text(clue.value, (c+0.25f)*clueWidth, (r+0.7f)*clueHeight);
 				}
-				else {
-					
+				else if (clue instanceof Category) {
+					textSize(60);
+					fill(255);
+					text(((Category) clue).category, (c+0.05f)*clueWidth, (r+0.5f)*clueHeight);
 				}
 			}
 		}
@@ -115,9 +118,10 @@ public class JeopardyGame extends PApplet {
 		fill(255);
 		strokeWeight(5);
 		stroke(0);
-		text(currentClue.clue, 0, 120, width, height - 500);
+		textSize(100);
+		text(currentClue.clue, 50, 100, width, height - 500);
 		if (mode == GameMode.SHOW_CLUE_ANSWER) {
-			text(currentClue.answer, 0, height - 500 + 120, width, 500);
+			text(currentClue.answer, 50, height - 300, width, 500);
 		}
 	}
 	
@@ -138,9 +142,8 @@ public class JeopardyGame extends PApplet {
 			int clueHeight = height / allClues.get(0).size();
 			int category = mouseX / clueWidth;
 			int clueIndex = mouseY / clueHeight;
-			System.out.println(category + " " + clueIndex);
 			Clue clue = allClues.get(category).get(clueIndex);
-			if (clue.active) {
+			if (clue.active && !(clue instanceof Category)) {
 				currentClue = clue;
 				if (clue.isDailyDouble) {
 					mode = GameMode.BOARD_REVEALED_DAILY_DOUBLE;
