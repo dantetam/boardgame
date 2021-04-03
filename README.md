@@ -1,5 +1,7 @@
 # Board Game Nights Meetup
 
+The official board game of the Board Game Nights Meetup Group! 
+
 Rules:
 Community cards are shared by the whole group. Each player has a separate inventory where they may store item cards.
 
@@ -12,6 +14,8 @@ A player dies when they reach zero HP. They are now dead. Dead players cannot pl
   Being dead is different than losing. Dead players may still win, but it's much harder. Losing is the end state of the game where some people have won the game.
 
 If a dead player is killed again, they are super dead. Alternatively, a player at or below -3 hp is super dead and cannot go below this number. Super dead players may not vote, heal, or come back to life. Instead, they choose a player to haunt on their turn.
+
+# Cards
 
 Action Cards:
 The standard cards. Play it, its effect activates, it's destroyed. 
@@ -38,3 +42,7 @@ Please use [this tutorial](https://riptutorial.com/processing/example/31227/usin
 ```
 To use Processing in Eclipse, start by creating a new Java project. Then, select File > Import and then choose General > File System to locate the core.jar file. It can be found in PATH_TO_PROCESSING/core/library/ for Windows or /Applications/Processing 3.app/Contents/Java/core/library/ for Mac. Once this is completed, right-click on core.jar and add it to the build path.
 ```
+
+## Improvements
+
+Remove hardcoded cards, use a text file
