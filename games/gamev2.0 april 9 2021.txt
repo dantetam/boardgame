@@ -1,0 +1,10 @@
+1 Andrew   0/3 hp    If hector or gary wins, 1 gold
+2 Hector  2 hp       Charity
+3 Joe      0/ hp
+4 Monica    0/ hp
+5 Tess     0/ hp Linked to Monica
+6 Christina   3/     Linked to hector
+7 Mitch       2/hp  Gold, Energy Drink (-1 hp, 1 extra turn)
+8 Gary      0/ hp
+9 Calvin  0/3 hp        Uno Reverse, Butter
+

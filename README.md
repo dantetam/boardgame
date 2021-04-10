@@ -7,14 +7,18 @@ The official board game of the Board Game Nights Meetup Group!
 Community cards are shared by the whole group. Each player has a separate inventory where they may store item cards.
 
 Every player is assigned a number. This number determines turn order. It also determines random dice. 
-Each player starts with 3 health points (HP). The limit is 7 HP.
+Each player starts with 3 health points (HP). The maximum limit is 7 HP.
 Every turn you can eat one item and play one card.
 Players go in order, determined randomly. A "turn" is when all players do their actions (or lack of actions).
 
-A player dies when they reach zero HP. They are now dead. Dead players cannot play cards or draw, but any old effects may still activate. Dead players may still vote. Dead players cannot be chosen for "random plrs" or "other plrs".
+A player dies when they reach zero HP. They are now dead. Dead players cannot play cards or draw, but any old effects may still activate. Dead players may still vote. Dead players cannot be chosen for "random plrs" or "other plrs". Dead players keep their items.
   Being dead is different than losing. Dead players may still win, but it's much harder. Losing is the end state of the game where some people have won the game.
 
-If a dead player is killed again, they are super dead. Alternatively, a player at or below -3 hp is super dead and cannot go below this number. Super dead players may not vote, heal, or come back to life. Instead, they choose a player to haunt on their turn.
+If a dead player is killed again, they are super dead. Alternatively, a player at or below -3 hp is super dead and cannot go below this number. Super dead players may not vote, heal, or come back to life. Super dead players' items are distributed randomly between all non super dead people. Instead, they choose a player to haunt on their turn.
+
+## Victory Conditions
+
+The default victory condition, that lasts all game unless otherwise specified, is that the last player alive wins by themselves. "Victory Condition" cards, when played, are shared across the group and define a new victory condition. You may fulfill the default and/or new victory condition to win. Once people win, everyone else who didn't win, loses.
 
 ## Cards
 
@@ -26,7 +30,7 @@ You super die = You are super dead with -3 HP
 Rand plr = Choose randomly from alive players. For example, if players 2, 3, and 5 are left, then roll 1-3 inclusive. Roll a 3, the effect applies to player 5.
 
 People Cards:
-Like action cards, but they're you! :D
+Like action cards, but they're you! People cards can be held in inventory. :D
 
 Item Cards:
 If you take an item card, it may have these effects:
@@ -35,10 +39,16 @@ Passive: This effect applies if the card is in your inventory the turns after yo
 
 Eat: You may choose to eat the card when you receive or on your next turn in addition to your turn actions. When you eat the card, it is destroyed, and its eat effect applies.
 
+Send: The effect applies and you choose a player to send the card to.
+
+Instant ____: The word in the blank applies, but now you can do this on any person's turn at any moment.
+
 Place Cards:
 Only one place card is active at a time. A place cards when played, is shared by everyone and replaces the old place card if there was one.
 
 ## Tech
+
+Inspired by [We Didn't Playtest This at All](https://www.amazon.com/Asmadi-Games-Didnt-Playtest-This/dp/B001N11OI2)!
 
 Please use [this tutorial](https://riptutorial.com/processing/example/31227/using-processing-with-eclipse#example "Using Processing with Eclipse by RIP Tutorial") to set up Processing in a Java IDE like Eclipse. (CC BY-SA 3.0 License)
 
