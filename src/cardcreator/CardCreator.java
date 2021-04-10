@@ -1,15 +1,9 @@
 package cardcreator;
 
 import java.io.File;
-import java.io.IOException;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
-import jeopardy.ui.GameButton;
-import jeopardy.ui.GameButtonFactory;
-import jeopardy.ui.ImageButton;
 import processing.core.PApplet;
 import processing.core.PFont;
 import processing.core.PImage;
@@ -151,14 +145,12 @@ public class CardCreator extends PApplet {
 		card1.count = 8;
 		cards.add(card1);
 		
-		/*
 		card1 = new Card();
 		card1.cardTitle = "Seer";
-		card1.text = "See the next seven cards in the deck. Put them back in any order.";
+		card1.text = "Say a word. If a card seen has this word before your next turn, it must be played.";
 		card1.imageUrl = "inputCardImages/seer.jpg";
 		card1.count = 2;
 		cards.add(card1);
-		*/
 		
 		card1 = new Card();
 		card1.cardTitle = "Skribbl.io Guessing";
@@ -183,14 +175,21 @@ public class CardCreator extends PApplet {
 		
 		card1 = new Card();
 		card1.cardTitle = "Jeopardy";
-		card1.text = "Choose question. Two other random plrs, one buzzes first. -1 hp to if wrong, else -1 hp to other. Die if your answer is wrong.";
+		card1.text = "Choose question. 2 other random plrs, 1 buzzes first. -1 hp to if wrong, else -1 hp to other. Die if your answer is wrong.";
 		card1.imageUrl = "inputCardImages/jeopardy.jpg";
 		card1.count = 4;
 		cards.add(card1);
 		
 		card1 = new Card();
+		card1.cardTitle = "Randomat";
+		card1.text = "Choose 1 Gold or 1 HP. Random effect occurs now: 1) Other plr plays rand card from board. 2) You play rand card.";
+		card1.imageUrl = "inputCardImages/randomat.jpg";
+		card1.count = 4;
+		cards.add(card1);
+		
+		card1 = new Card();
 		card1.cardTitle = "Baldur's Bones";
-		card1.text = "Two random plrs. ";
+		card1.text = "Two random plrs. Roll d6 until 1st player passes. Loss = -1 hp. Bust = death!";
 		card1.imageUrl = "inputCardImages/d20.jpg";
 		card1.count = 2;
 		cards.add(card1);
@@ -259,15 +258,8 @@ public class CardCreator extends PApplet {
 		cards.add(card1);
 		
 		card1 = new Card();
-		card1.cardTitle = "Pantheon";
-		card1.text = "";
-		card1.imageUrl = "inputCardImages/.png";
-		card1.count = 1;
-		cards.add(card1);
-		
-		card1 = new Card();
 		card1.cardTitle = "Demonetized";
-		card1.text = "";
+		card1.text = "(Passive): Lose one item or one HP at end of turn.";
 		card1.imageUrl = "inputCardImages/.png";
 		card1.count = 3;
 		cards.add(card1);
@@ -280,6 +272,13 @@ public class CardCreator extends PApplet {
 		card1.count = 2;
 		cards.add(card1);
 		*/
+		
+		card1 = new Card();
+		card1.cardTitle = "One for you and one for me.";
+		card1.text = "You and another plr (that you choose) take a random card from board right now.";
+		card1.imageUrl = "inputCardImages/impostor.png";
+		card1.count = 4;
+		cards.add(card1);
 		
 		card1 = new Card();
 		card1.cardTitle = "Among Us Vote";
@@ -305,6 +304,13 @@ public class CardCreator extends PApplet {
 		cards.add(card1);
 		
 		card1 = new Card();
+		card1.cardTitle = "Smaug";
+		card1.text = "Plrs w/ four gold win.";
+		card1.imageUrl = "inputCardImages/gold.jpeg";
+		card1.count = 3;
+		cards.add(card1);
+		
+		card1 = new Card();
 		card1.cardTitle = "Impostor Win";
 		card1.text = "First plr to reach two kills wins.";
 		card1.imageUrl = "inputCardImages/impostor.jpg";
@@ -327,8 +333,9 @@ public class CardCreator extends PApplet {
 		
 		card1 = new Card();
 		card1.cardTitle = "You're the Worst";
-		card1.text = "Every plr is controlled by the next plr, cycling around.";
+		card1.text = "Play extra card for yourself. Then, every plr is controlled by the next plr, cycling around. ";
 		card1.imageUrl = "inputCardImages/two_cards.jpg";
+		card1.count = 2;
 		cards.add(card1);
 		
 		//Place cards
@@ -355,9 +362,30 @@ public class CardCreator extends PApplet {
 		cards.add(card1);
 		
 		card1 = new Card();
+		card1.cardTitle = "San Francisco";
+		card1.text = "High Cost of Living: You can only have two items. Lose all gold.";
+		card1.imageUrl = "inputCardImages/san_francisco.jpg";
+		card1.type = "Place";
+		cards.add(card1);
+		
+		card1 = new Card();
 		card1.cardTitle = "Discord";
-		card1.text = "";
-		card1.imageUrl = "inputCardImages/chicago.jpg";
+		card1.text = "VR: All items are now 'virtual'. You can never lose them. If someone takes them, they are copied.";
+		card1.imageUrl = "inputCardImages/discord.jpg";
+		card1.type = "Place";
+		cards.add(card1);
+		
+		card1 = new Card();
+		card1.cardTitle = "The Midwest";
+		card1.text = "Spread Out: All numbers are halved. Round down if there's a dispute.";
+		card1.imageUrl = "inputCardImages/midwest.jpg";
+		card1.type = "Place";
+		cards.add(card1);
+		
+		card1 = new Card();
+		card1.cardTitle = "Barovia";
+		card1.text = "Vampiric Magic: All numbers (not ordinals) are negative.";
+		card1.imageUrl = "inputCardImages/barovia.jpg";
 		card1.type = "Place";
 		cards.add(card1);
 		
@@ -365,14 +393,14 @@ public class CardCreator extends PApplet {
 		
 		card1 = new Card();
 		card1.cardTitle = "Birthday Cake";
-		card1.text = "Eat: Gain one health";
+		card1.text = "Eat: Gain two health.";
 		card1.imageUrl = "inputCardImages/cake.jpg";
 		card1.count = 3;
 		cards.add(card1);
 		
 		card1 = new Card();
 		card1.cardTitle = "Uncrustables";
-		card1.text = "Eat: Gain one health";
+		card1.text = "Eat: Gain one health.";
 		card1.imageUrl = "inputCardImages/uncrustable.jpg";
 		card1.count = 3;
 		cards.add(card1);
@@ -399,10 +427,38 @@ public class CardCreator extends PApplet {
 		cards.add(card1);
 		
 		card1 = new Card();
+		card1.cardTitle = "Vicious Cycle";
+		card1.text = "Send: Deal -1 HP to another plr, that plr then receives this card.";
+		card1.imageUrl = "inputCardImages/shadow.jpg";
+		card1.count = 3;
+		cards.add(card1);
+		
+		card1 = new Card();
+		card1.cardTitle = "Trap Hole";
+		card1.text = "A random card (after this one is played) is now trapped. Playing the trapped card = -2 HP.";
+		card1.imageUrl = "";
+		card1.count = 3;
+		cards.add(card1);
+		
+		card1 = new Card();
+		card1.cardTitle = "Beer Fund Tax";
+		card1.text = "Every other plr must lose 1 Gold, or 1 Beer. Otherwise, lose -1 HP.";
+		card1.imageUrl = "";
+		card1.count = 4;
+		cards.add(card1);
+		
+		card1 = new Card();
+		card1.cardTitle = "Generous Gift";
+		card1.text = "You must give another plr one of your items. Next turn, you may play two cards.";
+		card1.imageUrl = "";
+		card1.count = 5;
+		cards.add(card1);
+		
+		card1 = new Card();
 		card1.cardTitle = "Gold";
-		card1.text = "";
+		card1.text = "It's a pile of gold coins.";
 		card1.imageUrl = "inputCardImages/gold.jpg";
-		card1.count = 8;
+		card1.count = 16;
 		cards.add(card1);
 		
 		card1 = new Card();
@@ -422,7 +478,7 @@ public class CardCreator extends PApplet {
 		card1 = new Card();
 		card1.cardTitle = "Heineken Beer";
 		card1.text = "The 'Tsingtao' of Europe? That's racist. Flammable. Eat: Remove 1 rand item from inv. Apply reverse effect to someone.";
-		card1.imageUrl = "inputCardImages/lagunitas.png";
+		card1.imageUrl = "inputCardImages/heineken.png";
 		card1.count = 3;
 		cards.add(card1);
 		
@@ -485,7 +541,7 @@ public class CardCreator extends PApplet {
 		
 		card1 = new Card();
 		card1.cardTitle = "Andrew";
-		card1.text = "Youtube Growth: ";
+		card1.text = "Youtube Growth: Play one more card this turn and two cards next turn.";
 		card1.imageUrl = "";
 		card1.count = 1;
 		cards.add(card1);
@@ -513,7 +569,7 @@ public class CardCreator extends PApplet {
 		
 		card1 = new Card();
 		card1.cardTitle = "Monica";
-		card1.text = "Impostor Vent: Kill one person. Skip your next turn.";
+		card1.text = "Impostor Vent: Kill one plr. Skip your next turn.";
 		card1.imageUrl = "";
 		card1.count = 1;
 		cards.add(card1);
@@ -583,14 +639,14 @@ public class CardCreator extends PApplet {
 		
 		card1 = new Card();
 		card1.cardTitle = "Sophia";
-		card1.text = "Poot Poot (Eat): For any turn in the future, you may choose it. The turn never happened and ends.";
+		card1.text = "Poot Poot (Instant Eat): For any turn in the future, you may choose it. The turn never happened and ends.";
 		card1.imageUrl = "";
 		card1.count = 1;
 		cards.add(card1);
 		
 		card1 = new Card();
 		card1.cardTitle = "Georgie";
-		card1.text = "Small Presence: Player w/ this card may sacrifice this card to prevent dmg or death.";
+		card1.text = "Small Presence (Instant Eat): Player w/ this card may sacrifice this card to prevent dmg or death.";
 		card1.imageUrl = "";
 		card1.count = 1;
 		cards.add(card1);
@@ -598,6 +654,8 @@ public class CardCreator extends PApplet {
 		PFont mono = createFont("Roboto-Bold.ttf", 32);
 		textFont(mono);
 		
+		int numCardsCount = 0;
+		int numUniqueCards = cards.size();
 		for (Card card: cards) {
 			background(255,255,255);
 			
@@ -621,9 +679,13 @@ public class CardCreator extends PApplet {
 			}
 			
 			save("./data/output/" + card.cardTitle + ";" + card.count + ".png");
+			
+			numCardsCount += card.count;
 		}
 		
 		System.out.println("Processed all cards");
+		System.out.println("Unique ones: " + numUniqueCards);
+		System.out.println("Total card count: " + numCardsCount);
 		exit();
 	}
 

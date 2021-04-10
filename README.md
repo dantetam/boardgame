@@ -2,7 +2,8 @@
 
 The official board game of the Board Game Nights Meetup Group! 
 
-Rules:
+## Rules:
+
 Community cards are shared by the whole group. Each player has a separate inventory where they may store item cards.
 
 Every player is assigned a number. This number determines turn order. It also determines random dice. 
@@ -15,7 +16,7 @@ A player dies when they reach zero HP. They are now dead. Dead players cannot pl
 
 If a dead player is killed again, they are super dead. Alternatively, a player at or below -3 hp is super dead and cannot go below this number. Super dead players may not vote, heal, or come back to life. Instead, they choose a player to haunt on their turn.
 
-# Cards
+## Cards
 
 Action Cards:
 The standard cards. Play it, its effect activates, it's destroyed. 
@@ -29,13 +30,15 @@ Like action cards, but they're you! :D
 
 Item Cards:
 If you take an item card, it may have these effects:
+
 Passive: This effect applies if the card is in your inventory the turns after you receieve it
+
 Eat: You may choose to eat the card when you receive or on your next turn in addition to your turn actions. When you eat the card, it is destroyed, and its eat effect applies.
 
 Place Cards:
 Only one place card is active at a time. A place cards when played, is shared by everyone and replaces the old place card if there was one.
 
-# Tech
+## Tech
 
 Please use [this tutorial](https://riptutorial.com/processing/example/31227/using-processing-with-eclipse#example "Using Processing with Eclipse by RIP Tutorial") to set up Processing in a Java IDE like Eclipse. (CC BY-SA 3.0 License)
 
@@ -46,3 +49,4 @@ To use Processing in Eclipse, start by creating a new Java project. Then, select
 ## Improvements
 
 Remove hardcoded cards, use a text file
+Remove unnecessary build/project files
