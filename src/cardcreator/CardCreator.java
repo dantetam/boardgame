@@ -1083,6 +1083,7 @@ public class CardCreator extends PApplet {
 		card1.count = 2;
 		cards.add(card1);
 
+		/*
 		PFont mono = createFont("Roboto-Bold.ttf", 32);
 		textFont(mono);
 
@@ -1128,6 +1129,23 @@ public class CardCreator extends PApplet {
 		System.out.println("Processed all cards");
 		System.out.println("Unique ones: " + numUniqueCards);
 		System.out.println("Total card count: " + numCardsCount);
+		*/
+
+		for (Card card: cards) {
+			if (card.type == "Person") {
+				card.cardBackground = new Color3f(150, 200, 150);
+			}
+			else if (card.type == "Victory Condition" || card.type == "Rule Change") {
+				card.cardBackground = new Color3f(150, 50, 50);
+			}
+			else if (card.type == "Item") {
+				card.cardBackground = new Color3f(200, 200, 120);
+			}
+			String[] rowData = new String[] {card.cardTitle, card.count + "", card.text, card.type, card.cardBackground.r + "", card.cardBackground.g + "", card.cardBackground.b + ""};
+			String row = String.join("|", rowData);
+			System.out.println(row);
+		}
+
 		exit();
 	}
 

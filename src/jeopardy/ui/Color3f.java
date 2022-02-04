@@ -6,5 +6,8 @@ public class Color3f {
 	public Color3f(float x, float y, float z) {
 		r = x; g = y; b = z;
 	}
+	public String toString() {
+		return r + "," + g + "," + b;
+	}
 	
 }
