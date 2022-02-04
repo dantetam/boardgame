@@ -56,6 +56,11 @@ Please use [this tutorial](https://riptutorial.com/processing/example/31227/usin
 To use Processing in Eclipse, start by creating a new Java project. Then, select File > Import and then choose General > File System to locate the core.jar file. It can be found in PATH_TO_PROCESSING/core/library/ for Windows or /Applications/Processing 3.app/Contents/Java/core/library/ for Mac. Once this is completed, right-click on core.jar and add it to the build path.
 ```
 
+To run the Python script that generates cards:
+```
+python src/python-card-printer/main.py
+```
+
 ## Improvements
 
 Remove hardcoded cards, use a text file
