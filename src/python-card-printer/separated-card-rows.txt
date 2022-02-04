@@ -1,0 +1,96 @@
+Transporter|2|Transfer one item or effect from one player to another.|Action|255.0|255.0|255.0
+Charity|6|Cannot involve you. Transfer one item or effect from one plr to another.|Action|255.0|255.0|255.0
+Communism!|2|The plr w/ the most items, if no tie, loses 1 HP and all their items. Other plrs lose first item.|Action|255.0|255.0|255.0
+Capitalism!|2|Gain 2 HP. The plr w/ most items (no tie) takes 1 item. Other plrs lose 1st item.|Action|255.0|255.0|255.0
+Um, Actually|5|Choose any card played in the last turn, act like it was never played.|Action|255.0|255.0|255.0
+Damnatio|2|Write down one player's name. On your next turn, they die.|Action|255.0|255.0|255.0
+Uno Reverse|2|Choose plr. The last card they played also affects them w/ same effect.|Action|255.0|255.0|255.0
+It's Made Out Of|3|Take 1 of your items and turn it into 1 item someone owns. If no one owns items, choose from all items.|Action|255.0|255.0|255.0
+I Can't Believe It's Not|2|Take any 1 owned item and turn it into Butter.|Action|255.0|255.0|255.0
+Murder Mystery|3|Choose random plr. That plr dies.|Action|255.0|255.0|255.0
+Death Link|3|Choose one plr and then a rand plr. If one of these plrs dies, the other one dies.|Action|255.0|255.0|255.0
+Salt Poisoning|3|You die. Choose another plr to die.|Action|255.0|255.0|255.0
+Bad Mind Control|4|Choose random plr. That plr must play a random card on their next turn.|Action|255.0|255.0|255.0
+Quiplash|4|Choose a prompt and 2 other rand plrs. Others vote. Loss = -1 hp. Quip = plr. dies. Tie = both lose.|Action|255.0|255.0|255.0
+Price is Not Right|4|Choose purchasable item. 2 other random plrs to guess price. Use Amazon. Farther price = -2 hp.|Action|255.0|255.0|255.0
+Arsonist|6|Other plrs -1 hp/flammable item in inv. Destroy f. items. If no f. items, choose 1 plr -2 HP.|Action|255.0|255.0|255.0
+Seer|2|Say a word. If a board card has this word before your next turn, it must be played.|Action|255.0|255.0|255.0
+Skribbl.io Guessing|6|Draw a picture. 2 other rand plrs to guess. Third party reads. Vote. Loss = -1 hp. Quip = plr. dies. Tie = both lose.|Action|255.0|255.0|255.0
+Skribbl.io Drawing|6|Choose prompt. 2 other rand plrs to draw. Third party shows. Vote. Loss = -1 hp. Quip = plr. dies. Tie = both lose.|Action|255.0|255.0|255.0
+Sound Design Improv|4|2 random players. Choose a sound prompt without words. Vote. Less votes = -1 hp|Action|255.0|255.0|255.0
+Jeopardy|4|Choose question. 2 other random plrs, 1 buzzes first. -1 hp to if wrong, else -1 hp to other. Die if your answer is wrong.|Action|255.0|255.0|255.0
+Randomat|4|Choose 1 Gold or 1 HP. Random effect occurs now: 1) Other plr plays rand card from board. 2) You play rand card.|Action|255.0|255.0|255.0
+Baldur's Bones|2|2 random plrs. Roll d6 until 1st player passes. Loss = -1 hp. Bust = death!|Action|255.0|255.0|255.0
+Baldur's Dice|2|Choose another random plr. Roll d20+5 and they roll d20. Lower roll, if no tie, dies.|Action|255.0|255.0|255.0
+DND Campaign|2|Roll a d20 + number of players alive. -1 hp if lower than 10. Else, choose one plr -2 hp.|Action|255.0|255.0|255.0
+Shuffle|4|Gain 1 gold. Discard all cards and redraw same number of cards. End turn.|Action|255.0|255.0|255.0
+Jester|2|Random plr is jester. The jester will be informed. If this plr dies by someone else's card, they win.|Action|255.0|255.0|255.0
+Executioner|5|Passive: Receive rand target for rest of game. If you kill them with a card, you win. (Chain effects count.)|Action|255.0|255.0|255.0
+Half Even|1|Every even numbered player dies.|Action|255.0|255.0|255.0
+Half Odd|1|Every odd numbered player dies.|Action|255.0|255.0|255.0
+Death|6|You die if you play this card.|Action|255.0|255.0|255.0
+Super Death|1|You SUPER die if you play this card.|Action|255.0|255.0|255.0
+Armaggedon|1|2 random plrs die. Game ends on the end of your next next turn.|Action|255.0|255.0|255.0
+Demonetized|3|(Passive): Lose one item or one HP at end of turn.|Item|200.0|200.0|120.0
+One for you and one for me|4|You and another plr (that you choose) take a random card from board right now.|Action|255.0|255.0|255.0
+Among Us Vote|4|You start w/ 2 votes. Everyone gets one vote in order. Person w/ most votes, if no tie, dies.|Action|255.0|255.0|255.0
+Be Humble|2|Every plr without items wins on the end of your next next turn.|Victory Condition|150.0|50.0|50.0
+Cornucopia|2|Plrs w/ 4 food win.|Victory Condition|150.0|50.0|50.0
+Smaug|3|Plrs w/ 4 gold win.|Victory Condition|150.0|50.0|50.0
+Impostor Win|2|First plr to reach 2 kills wins. (Chain effects do not count.)|Victory Condition|150.0|50.0|50.0
+Doctor Win|2|Save 3 unique people. (Chain effects count.)|Victory Condition|150.0|50.0|50.0
+Play 2|1|Every plr plays 2 cards on the beginning of their turn.|Rule Change|150.0|50.0|50.0
+You're the Worst|2|Play extra card for yourself. Then, every plr is controlled by the next plr, cycling around. |Rule Change|150.0|50.0|50.0
+San Jose|1|No effects.|Place|255.0|255.0|255.0
+LA|1|Urban Sprawl: Every full turn (when the first alive plr starts action), one rand plr takes -1 HP.|Place|255.0|255.0|255.0
+Chicago|1|Deep Dish: Any food item now does double the effect listed in (Eat)|Place|255.0|255.0|255.0
+San Francisco|1|High Cost of Living: You can only have 2 items. Lose all gold.|Place|255.0|255.0|255.0
+Discord|1|VR: All items are now 'virtual'. You can never lose them. If someone takes them, they are copied.|Place|255.0|255.0|255.0
+The Midwest|1|Spread Out: All numbers are halved. Round down if there's a dispute.|Place|255.0|255.0|255.0
+Barovia|1|Vampiric Magic: All numbers (not ordinals) are negative.|Place|255.0|255.0|255.0
+Birthday Cake|3|Eat: Gain 2 health.|Item|200.0|200.0|120.0
+Uncrustables|3|Eat: Gain one health.|Item|200.0|200.0|120.0
+Butter|3|Flammable. Eat: Lose one health.|Item|200.0|200.0|120.0
+Energy Drink|3|Eat: Lose one health. Take an extra turn.|Item|200.0|200.0|120.0
+Vengeful Shadow|3|On Death: Choose another plr. They can lose either 2 HP, or one item of your choice.|Item|200.0|200.0|120.0
+Vicious Cycle|3|Send: Deal -1 HP to another plr, that plr then receives this card.|Item|200.0|200.0|120.0
+Trap Hole|3|A random card (after this one is played) is now trapped. Playing the trapped card = -2 HP.|Item|200.0|200.0|120.0
+Beer Fund Tax|4|Every other plr must lose 1 Gold, or 1 Beer. Otherwise, lose -1 HP.|Item|200.0|200.0|120.0
+Generous Gift|5|You must give another plr one of your items. Next turn, you may play 2 cards.|Item|200.0|200.0|120.0
+Gold|16|It's a pile of gold coins. (Use): You may pay 2 gold for an extra turn.|Item|200.0|200.0|120.0
+Weighted d20|3|Nat 1 again?|Item|200.0|200.0|120.0
+Lagunitas Beer|4|Official beer of the meetup group! Flammable. Eat: Gain 1 HP. Must play random card this turn.|Item|200.0|200.0|120.0
+Heineken Beer|3|The 'Tsingtao' of Europe? That's racist. Flammable. Eat: Remove 1 rand item from inv. Apply reverse effect to someone.|Item|200.0|200.0|120.0
+One Night Werewolf|3|Why is the Tanner trying to kill themselves?|Item|200.0|200.0|120.0
+Lofi Hip-Hop Beats|3|To relax to. Music.|Item|200.0|200.0|120.0
+Sessions Live|3|We listen to Joe and other awesome artists. Music.|Item|200.0|200.0|120.0
+Hamilton|3|Lin Manuel Miranda and the cast. Music.|Item|200.0|200.0|120.0
+Snollygoster|3|Who poisoned the water?|Item|200.0|200.0|120.0
+Avalon|3|It should only take 30 minutes, right?|Item|200.0|200.0|120.0
+Seven Wonders|3|I need more bricks!|Item|200.0|200.0|120.0
+Poison|3|Who inspected the food last time? If you take this card, you die on your next turn.|Item|200.0|200.0|120.0
+Burn|3|Destroy one of your flammable items. Someone of your choice loses 2 health.|Item|200.0|200.0|120.0
+Cat|2|It's a cat. Passive: May eat one item in inventory to gain one extra card play|Item|200.0|200.0|120.0
+Centaur|3|Half horse, I think. Eat: Choose card to play now. Numbers doubled. (Ordinals don't count.)|Item|200.0|200.0|120.0
+Ramen|3||Item|200.0|200.0|120.0
+Bardic Inspiration|3|While you hold this card, gain a +4 to all d20 'saves'.|Item|200.0|200.0|120.0
+Evil Djinn|3|Eat: Kill 1 plr this turn. The person with this item on your next turn dies.|Item|200.0|200.0|120.0
+State Regime|2|Passive: You are the Dictator. Dictator takes any 2 items once now. Only Dictator can win. Death = destroy this card.|Item|200.0|200.0|120.0
+Andrew|2|Youtube Growth: Play one more card this turn and 2 cards next turn.|Person|150.0|200.0|150.0
+Gosu|2|GME Rocket: Discard and draw 3 cards. Play 2 cards next turn.|Person|150.0|200.0|150.0
+Mitch|2|Midwestern Charm: One plr on one of their turns, must do what you say.|Person|150.0|200.0|150.0
+Christina|2|Defibrillator: Revive one plr to one HP. If they win, you win.|Person|150.0|200.0|150.0
+Monica|2|Impostor Vent: Kill one plr. Skip your next turn.|Person|150.0|200.0|150.0
+Calvin|2|Options Chaos: Discard all cards and redraw the same number of cards. Take another turn.|Person|150.0|200.0|150.0
+Pravan|2|Valorant X Ult Snipe: Remove all items from 2 players.|Person|150.0|200.0|150.0
+Scott and Rachael|2|Couple: Choose one plr. You 2 are now linked. Items are shared. If they die, you die.|Person|150.0|200.0|150.0
+Will|2|Cake: Everyone gains one health and loses poisons. If you have food in your inventory, you die.|Person|150.0|200.0|150.0
+Hector|2|This Is The Way: Choose one card and add a copy of it to the hand.|Person|150.0|200.0|150.0
+Tess|2|Negative Points: Anyone with less than full health must skip their turn once.|Person|150.0|200.0|150.0
+Jess|2|Cat Lover: If you have an animal in your inventory, you gain 1 HP per turn.|Person|150.0|200.0|150.0
+Julia|2|Apartment Baking: Gain 2 food items of your choosing.|Person|150.0|200.0|150.0
+Joe|2|Guitar Riff: Give 'Bardic Inspiration' to 2 other people.|Person|150.0|200.0|150.0
+Dante|2|Aggressive Sarcasm: Take 1 card played in last turn, apply reverse effect to someone. (Cannot win.)|Person|150.0|200.0|150.0
+Noel|2|Hit the Book: Take one card you played before, play it again now.|Person|150.0|200.0|150.0
+Sophia|2|Poot Poot (Instant Eat): For any turn in the future, you may choose it. The turn never happened and ends.|Person|150.0|200.0|150.0
+Georgie|2|Small Presence (Instant Eat): Player w/ this card may sacrifice this card to prevent dmg or death.|Item|200.0|200.0|120.0
