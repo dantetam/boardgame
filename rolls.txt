@@ -1,8 +1,0 @@
-!2d20k1+6 #atk roll
-
-!1d20+6 #atk roll
-
-!1d6+4+2d6 #bow with sneak atk
-
-!1d6+4 #normal bow dmg
-
