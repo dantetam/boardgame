@@ -59,7 +59,7 @@ Die/super die : live
 
 ## Victory Conditions
 
-The default victory condition that lasts all game on top of other victory cards unless otherwise specified, is that the last player alive wins by themselves. "Victory Condition" cards, when played, are shared across the group. You may fulfill the default and/or new victory condition to win. Once any number of people win, everyone else loses instantly.
+The default victory condition that lasts all game on top of other victory cards unless otherwise specified, is that the last player alive wins by themselves (at the full end of any effects, counters, and turns). "Victory Condition" cards, when played, are shared across the group. You may fulfill the default and/or new victory condition to win. Once any number of people win, everyone else loses instantly.
 
 House rule: the winners of the last game draw only four cards in individual mode.
 
@@ -75,7 +75,9 @@ Rand plr = Choose randomly from alive players. For example, if players 2, 3, and
 Mill = Draw until the condition is satisfied, and then shuffle the deck. If the condition is not met and there are no cards left, die.
 Deal damage = Includes both kills and loss of HP
 Any ability which requires you to look at someone else's hand = May optionally show the whole table the cards you see
+Visible = Includes items as well as any card made visible to you as part of an effect
 ```
+Tentative Card Speed: Instant Use, Instant, Effect, Play. Of course within these categories, order of play (in the real world) applies.
 
 People Cards:
 Like action cards, but they're you! People cards can be held in inventory. :D
@@ -92,6 +94,8 @@ Eat/Use: You may choose to eat the card on the turn you receive this card, or an
 Send: The effect applies and you choose a player to send the card to.
 
 Instant ____: The word in the blank applies, but now you can do this on any person's turn at any moment.
+
+An item's effect no longer applies if the item is destroyed.
 
 Place Cards:
 Only one place card is active at a time. A place cards when played, is shared by everyone and replaces the old place card if there was one.

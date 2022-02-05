@@ -204,7 +204,7 @@ public class CardCreator extends PApplet {
 
 		card1 = new Card();
 		card1.cardTitle = "Arsonist";
-		card1.text = "Other plrs -1 hp/flammable item in inv. Destroy f. items. If no f. items, choose 1 plr -2 HP.";
+		card1.text = "Other plrs lose 1 hp per flammable item in inv. Destroy f. items. If no f. items, choose 1 plr -2 HP.";
 		card1.imageUrl = "inputCardImages/arsonist.png";
 		card1.count = 6;
 		card1.type = "Action";
@@ -212,7 +212,7 @@ public class CardCreator extends PApplet {
 
 		card1 = new Card();
 		card1.cardTitle = "Seer";
-		card1.text = "Say a word. If a board card has this word before your next turn, it must be played.";
+		card1.text = "Say a word. All drawn cards are revealed. Until the start of your next turn, if it has the word, it must be played and this effect deactivates.";
 		card1.imageUrl = "inputCardImages/seer.jpg";
 		card1.count = 4;
 		card1.type = "Action";
@@ -385,6 +385,14 @@ public class CardCreator extends PApplet {
 		card1.cardTitle = "Among Us Vote";
 		card1.text = "You start w/ 2 votes. Everyone gets one vote in order. Person w/ most votes, if no tie, dies.";
 		card1.imageUrl = "inputCardImages/impostor.png";
+		card1.count = 4;
+		card1.type = "Action";
+		cards.add(card1);
+		
+		card1 = new Card();
+		card1.cardTitle = "Starkid Impressions";
+		card1.text = "Choose another plr to be charades person. Random other plr is guesser. You choose a concept for t";
+		card1.imageUrl = "inputCardImages/roulette.jpg";
 		card1.count = 4;
 		card1.type = "Action";
 		cards.add(card1);
@@ -644,6 +652,14 @@ public class CardCreator extends PApplet {
 		card1.type = "Item";
 		card1.count = 3;
 		cards.add(card1);
+		
+		card1 = new Card();
+		card1.cardTitle = "Defenestrate";
+		card1.text = "Evil. Instant Use: You may destroy any card in your hand or any visible card.";
+		card1.imageUrl = "";
+		card1.type = "Item";
+		card1.count = 5;
+		cards.add(card1);
 
 		card1 = new Card();
 		card1.cardTitle = "Beer Fund Tax";
@@ -863,7 +879,7 @@ public class CardCreator extends PApplet {
 
 		card1 = new Card();
 		card1.cardTitle = "Terrible Totem";
-		card1.text = "Evil. Passive: Once per turn starting this turn, you may place 1 item on this totem. For 1 HP, steal an item. Reach 3 items, you may sacrifice all items to kill one plr. Death = destroy this card and any items left are given to last victim, otherwise, plr to right.";
+		card1.text = "Evil. Passive: Once per turn, add your item to this totem, or for 1 HP, steal one. Remove 3 items to kill 1 plr. Death = destroy this card and items go to last victim, else plr to right.";
 		card1.imageUrl = "inputCardImages/salt.jpeg";
 		card1.count = 3;
 		card1.type = "Item";
@@ -879,7 +895,7 @@ public class CardCreator extends PApplet {
 
 		card1 = new Card();
 		card1.cardTitle = "Subjugation";
-		card1.text = "Evil. Passive: Declare a 'subject' person once for this item. Whoever owns this item is the ruler. The subject can only win if the ruler wins. Use: You may destroy this item.";
+		card1.text = "Evil. Passive: Declare a 'subject' person only once. Whoever owns this item is the ruler. The subject wins and can only win if their ruler wins. Use: You may destroy this item.";
 		card1.imageUrl = "";
 		card1.count = 3;
 		card1.type = "Item";
@@ -1059,17 +1075,17 @@ public class CardCreator extends PApplet {
 
 		card1 = new Card();
 		card1.cardTitle = "Hector and Julia";
-		card1.text = "Newly Wed: ";
+		card1.text = "Crimson Vow: Choose another plr. You both lose 1 HP. ";
 		card1.imageUrl = "";
 		card1.type = "Person";
-		card1.count = 2;
+		card1.count = 1;
 		cards.add(card1);
 
         //NPCs lol
 
 		card1 = new Card();
 		card1.cardTitle = "Georgie";
-		card1.text = "Small Presence (Instant Eat): Player w/ this card may sacrifice this card to prevent dmg or death.";
+		card1.text = "Small Presence (Instant Use): May sacrifice this card to cancel any card that causes dmg or death towards anyone. Gain 1 Gold.";
 		card1.imageUrl = "";
 		card1.type = "Item";
 		card1.count = 2;

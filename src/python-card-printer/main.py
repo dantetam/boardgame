@@ -13,43 +13,62 @@ cardHeight = 63
 if os.path.exists("cards.pdf"):
     os.remove("cards.pdf")
 
-def myOwnTextWrapper(txt, x, y, width, fontSize):
-    cursorX = x
-    cursorY = y
+def myOwnTextWrapper(txt, x, y, width, padding, fontSize):
+    cursorX = x + padding
+    cursorY = y + padding
     tokens = txt.split()
     i = 0
     while i < len(tokens):
-        wordOffset = (len(tokens[i]))*fontSize/5
-        if cursorX + wordOffset - x > width:
-            cursorX = x
+        wordOffset = (len(tokens[i]) + 1)*fontSize*0.353/2
+        if cursorX + wordOffset - x > width - padding:
+            cursorX = x + padding
             cursorY = cursorY + fontSize/2
         pdf.text(cursorX, cursorY, tokens[i])
         cursorX = cursorX + wordOffset
-        if cursorX - x > width:
-            cursorX = x
+        if cursorX - x > width - padding:
+            cursorX = x + padding
             cursorY = cursorY + fontSize/2
         i = i + 1
 
-# save FPDF() class into a
-# variable pdf
+def readSeparatedCardFile(cardFilePath):
+    results = []
+    with open(cardFilePath) as f:
+        lines = f.readlines()
+        for line in lines:
+            tokens = line.split("|")
+            convertToFloat = lambda token: float(token) if token.isnumeric() else token
+            tokens = [convertToFloat(token) for token in tokens]
+            results.append(tokens)
+    return results
+
+def drawCards(cardFilePath):
+    cards = readSeparatedCardFile(cardFilePath)
+    while True:
+        pdf.add_page()
+        for j in range(4):
+            for i in range(3):
+                if len(cards) == 0: return
+                curCard = cards[0]
+                while curCard[1] <= 0:
+                    if len(cards) == 1: return
+                    cards.pop(0)
+                    curCard = cards[0]
+                curCard[1] = curCard[1] - 1
+
+                x = i*cardWidth + 12
+                y = j*cardHeight + 15
+                padding = 3
+                pdf.text(x + padding, y + padding,curCard[0])
+                #pdf.text(x,y+6,"Test2")
+                myOwnTextWrapper(curCard[2], x, y+globalFontSize, cardWidth, padding, 12)
+                wrap = 1 if i==2 else 0
+                pdf.cell(cardWidth, cardHeight, txt = "", ln = wrap, align = 'L', border = 1)
+
+
+
 pdf = FPDF()
-
-# Add a page
-pdf.add_page()
-
-# set style and size of font
-# that you want in the pdf
 pdf.set_font("Courier", size = globalFontSize)
 
-for j in range(4):
-    for i in range(3):
-        x = i*cardWidth + 12
-        y = j*cardHeight + 15
-        pdf.text(x,y,"Test")
-        #pdf.text(x,y+6,"Test2")
-        myOwnTextWrapper(longTestStr, x, y+globalFontSize/2, cardWidth, 12)
-        wrap = 1 if i==2 else 0
-        pdf.cell(cardWidth, cardHeight, txt = "", ln = wrap, align = 'L', border = 1)
+drawCards("./src/python-card-printer/separated-card-rows.txt")
 
-# save the pdf with name .pdf
 pdf.output("cards.pdf")
